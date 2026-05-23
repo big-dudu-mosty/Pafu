@@ -1,5 +1,5 @@
 {
-  description = "spank - Yells 'ow!' when you slap the laptop";
+  description = "Pafu - reactive desktop creature that yells back when you slap the laptop";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";

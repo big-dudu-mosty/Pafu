@@ -3,22 +3,22 @@ flake:
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.programs.spank;
-  spankPkg = flake.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  cfg = config.programs.pafu;
+  pafuPkg = flake.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
-  options.programs.spank = {
-    enable = lib.mkEnableOption "spank - yells when you slap the laptop";
+  options.programs.pafu = {
+    enable = lib.mkEnableOption "Pafu - yells back when you slap the laptop";
 
     package = lib.mkOption {
       type = lib.types.package;
-      default = spankPkg;
-      defaultText = lib.literalExpression "inputs.spank.packages.\${system}.default";
-      description = "The spank package to use.";
+      default = pafuPkg;
+      defaultText = lib.literalExpression "inputs.pafu.packages.\${system}.default";
+      description = "The Pafu package to use.";
     };
 
     mode = lib.mkOption {
-      type = lib.types.enum [ "pain" "sexy" "halo" ];
+      type = lib.types.enum [ "pain" "sexy" "halo" "lizard" ];
       default = "pain";
       description = "Audio mode to use.";
     };

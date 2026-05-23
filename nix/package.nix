@@ -1,7 +1,7 @@
 { lib, buildGoModule, go_1_26 }:
 
 buildGoModule.override { go = go_1_26; } {
-  pname = "spank";
+  pname = "pafu";
   version = "0-unstable";
 
   src = lib.cleanSource ./..;
@@ -15,10 +15,10 @@ buildGoModule.override { go = go_1_26; } {
   doCheck = false;
 
   meta = {
-    description = "Yells 'ow!' when you slap the laptop";
+    description = "Pafu - reactive desktop creature that yells back when you slap the laptop";
     homepage = "https://github.com/taigrr/spank";
     license = lib.licenses.mit;
     platforms = [ "aarch64-darwin" ];
-    mainProgram = "spank";
+    mainProgram = "pafu";
   };
 }

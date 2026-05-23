@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="doc/logo.png" alt="Pafu logo" width="200">
-</p>
-
 # Pafu
 
 **English** | [简体中文][readme-zh-link]
